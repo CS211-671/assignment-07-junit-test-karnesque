@@ -27,4 +27,10 @@ class StudentTest {
         assertEquals("kay" , s1.getName());
     }
 
+    @Test
+    void testisID(){
+        Student s1 = new Student("9909","karn");
+        boolean actual = s1.isId("9909");
+        assertTrue(actual);
+    }
 }

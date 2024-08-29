@@ -59,11 +59,14 @@ class UserListTest {
     @DisplayName("User with incorrect password cannot login")
     public void testUserListShouldReturnNullIfUsernameAndPasswordIsIncorrect() {
         // TODO: add 3 users to UserList
-
+        UserList group = new UserList();
+        group.addUser("user1" , "user1.pwd");
+        group.addUser("user2" , "user2.pwd");
+        group.addUser("user3" , "user3.pwd");
         // TODO: call login() with incorrect username or incorrect password
-
+        User actual = group.login("user1" , "user2.pwd");
         // TODO: assert that the method return null
-        // assertNull(actual);
+        assertNull(actual);
     }
 
 }
